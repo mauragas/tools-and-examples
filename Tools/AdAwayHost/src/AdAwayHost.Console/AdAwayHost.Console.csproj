@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <ProjectReference Include="..\AdAwayHost\AdAwayHost.csproj"/>
+    <ProjectReference Include="..\AdAwayHost.Shared\AdAwayHost.Shared.csproj"/>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="CommandLineParser" Version="2.7.82"/>
+    <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="3.1.2"/>
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="3.1.2"/>
+    <PackageReference Include="Microsoft.Extensions.Configuration.CommandLine" Version="3.1.2"/>
+    <PackageReference Include="Serilog" Version="2.9.0"/>
+    <PackageReference Include="Serilog.Sinks.File" Version="4.1.0"/>
+    <PackageReference Include="Serilog.Sinks.Console" Version="3.1.1"/>
+    <PackageReference Include="Serilog.Exceptions" Version="5.4.0"/>
+    <PackageReference Include="Serilog.Formatting.Compact" Version="1.1.0"/>
+    <PackageReference Include="System.Runtime.Extensions" Version="4.3.1"/>
+    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="3.1.2"/>
+    <PackageReference Include="Serilog.Sinks.SyslogMessages" Version="1.0.5"/>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources/RemoteHostFileUrls.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <AssemblyName>AdAwayHosts</AssemblyName>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <OutputType>Exe</OutputType>
+    <PackageLicenseUrl>https://github.com/mauragas/AdAwayHost/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/mauragas/AdAwayHost</PackageProjectUrl>
+  </PropertyGroup>
+</Project>

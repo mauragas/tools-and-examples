@@ -1,0 +1,9 @@
+0.0.0.0 HostName1
+127.0.0.1 HostName13
+127.0.0.1 HostName14
+127.0.0.1 HostName2
+127.0.0.1 HostName3
+127.0.0.1 HostName4
+10.0.0.10 HostName5
+10.0.0.10 HostName6
+::1 HostName9

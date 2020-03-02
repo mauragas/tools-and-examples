@@ -1,0 +1,20 @@
+# Comment 1
+
+
+0.0.0.0 HostName1
+127.0.0.1 HostName2
+127.0.0.1   HostName3
+127.0.0.1       HostName4
+10.0.0.10 HostName5
+        10.0.0.10 HostName6
+# 10.0.0.10 HostName7 HostName8
+
+::1 HostName9
+
+-10.0.0.10 HostName10
+X 10.0.0.10 HostName11
+127.xx.xx.1 HostName12
+
+ # Comment 2
+
+ 127.0.0.1 HostName13 HostName14
