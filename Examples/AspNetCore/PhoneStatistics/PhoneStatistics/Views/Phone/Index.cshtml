@@ -1,0 +1,124 @@
+﻿@{
+    ViewData["Title"] = "Phone statistics";
+}
+
+@model PhoneStatistics.ViewModels.PhoneEventViewModel
+
+<br>
+<div>
+    <table class="formTable">
+        <form method="get">
+            <tr>
+                <td>Start date:</td>
+                <td><input 
+                        asp-for="StartDate"
+                        type="date"
+                        class="form-control"/>
+                </td>
+                <td>End date:</td>
+                <td><input 
+                        asp-for="EndDate"
+                        type="date" 
+                        class="form-control"/>
+                </td>
+                <td>
+                    <input asp-action="Index"
+                           type="submit"
+                           class="btn"
+                           value="Filer content"/></td>
+            </tr>
+        </form>   
+    </table>
+    <table class="formTable">
+        <tr>
+            <td>
+                  <p>Total call count: <b>@Model.CountOfCall</b></p>          
+            </td>
+            <td>
+                  <p>Total sms count: <b>@Model.CountOfSms</b></p>
+            </td>
+        </tr>
+    </table>
+    <br/>
+    <h2>Calls</h2>
+        <table id="PhoneCallStatisticsTable" class="table">
+            <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(m => m.SmsEvents.First().Id)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(m => m.SmsEvents.First().Msisdn)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(m => m.SmsEvents.First().Duration)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(m => m.SmsEvents.First().Date)
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var item in Model.CallEvents)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Msisdn)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Duration)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Date)
+                    </td>
+                </tr>
+            }
+            </tbody>
+        </table>
+        <br/>
+        <h2>Messages</h2>
+        <table id="PhoneSmsStatisticsTable" class="table">
+            <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(m => m.SmsEvents.First().Id)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(m => m.SmsEvents.First().Msisdn)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(m => m.SmsEvents.First().Date)
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var item in Model.SmsEvents)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Msisdn)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Date)
+                    </td>
+                </tr>
+            }
+            </tbody>
+        </table>
+</div>
+
+@section Scripts {
+    <!-- For the DataTables grid -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+            
+    <!-- Page-specific script -->
+    <script src="~/js/Views/Index.js" asp-append-version="true"></script>
+}

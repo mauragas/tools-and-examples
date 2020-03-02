@@ -1,0 +1,471 @@
+[
+  {
+    "Id": 1,
+    "Msisdn": "123123123",
+    "Type": "sms",
+    "Duration": 54,
+    "Date": "2019-01-25T00:00:00"
+  },
+  {
+    "Id": 2,
+    "Msisdn": "123123123",
+    "Type": "call",
+    "Duration": 123,
+    "Date": "2019-01-01T00:00:00"
+  },
+  {
+    "Id": 3,
+    "Msisdn": "123123123",
+    "Type": "call",
+    "Duration": 123,
+    "Date": "2019-01-01T00:00:00"
+  },
+  {
+    "Id": 4,
+    "Msisdn": "123123123",
+    "Type": "call",
+    "Duration": 123,
+    "Date": "2019-01-25T00:00:00"
+  },
+  {
+    "Id": 5,
+    "Msisdn": "123123123",
+    "Type": "call",
+    "Duration": 123,
+    "Date": "2019-01-01T00:00:00"
+  },
+  {
+    "Id": 6,
+    "Msisdn": "123123123",
+    "Type": "call",
+    "Duration": 123,
+    "Date": "2019-01-01T00:00:00"
+  },
+  {
+    "Id": 7,
+    "Msisdn": "123123123",
+    "Type": "call",
+    "Duration": 123,
+    "Date": "2019-01-01T00:00:00"
+  },
+  {
+    "Id": 8,
+    "Msisdn": "123123123",
+    "Type": "call",
+    "Duration": 123,
+    "Date": "2019-01-01T00:00:00"
+  },
+  {
+    "Id": 9,
+    "Msisdn": "123123123",
+    "Type": "call",
+    "Duration": 123,
+    "Date": "2019-01-01T00:00:00"
+  },
+  {
+    "Id": 10,
+    "Msisdn": "123123123",
+    "Type": "call",
+    "Duration": 123,
+    "Date": "2019-01-01T00:00:00"
+  },
+  {
+    "Id": 11,
+    "Msisdn": "123123123",
+    "Type": "call",
+    "Duration": 123,
+    "Date": "2019-01-01T00:00:00"
+  },
+  {
+    "Id": 12,
+    "Msisdn": "123123123",
+    "Type": "call",
+    "Duration": 123,
+    "Date": "2019-01-01T00:00:00"
+  },
+  {
+    "Id": 13,
+    "Msisdn": "123123123",
+    "Type": "call",
+    "Duration": 123,
+    "Date": "2019-01-01T00:00:00"
+  },
+  {
+    "Id": 14,
+    "Msisdn": "123123123",
+    "Type": "call",
+    "Duration": 123,
+    "Date": "2019-01-01T00:00:00"
+  },
+  {
+    "Id": 15,
+    "Msisdn": "123123123",
+    "Type": "call",
+    "Duration": 123,
+    "Date": "2019-01-01T00:00:00"
+  },
+  {
+    "Id": 16,
+    "Msisdn": "123123123",
+    "Type": "call",
+    "Duration": 123,
+    "Date": "2019-01-01T00:00:00"
+  },
+  {
+    "Id": 17,
+    "Msisdn": "123123123",
+    "Type": "call",
+    "Duration": 123,
+    "Date": "2019-01-01T00:00:00"
+  },
+  {
+    "Id": 18,
+    "Msisdn": "123123123",
+    "Type": "call",
+    "Duration": 123,
+    "Date": "2019-01-01T00:00:00"
+  },
+  {
+    "Id": 19,
+    "Msisdn": "123123123",
+    "Type": "call",
+    "Duration": 123,
+    "Date": "2019-01-01T00:00:00"
+  },
+  {
+    "Id": 20,
+    "Msisdn": "123123123",
+    "Type": "call",
+    "Duration": 123,
+    "Date": "2019-01-01T00:00:00"
+  },
+  {
+    "Id": 21,
+    "Msisdn": "123123123",
+    "Type": "call",
+    "Duration": 123,
+    "Date": "2019-01-01T00:00:00"
+  },
+  {
+    "Id": 22,
+    "Msisdn": "123123123",
+    "Type": "call",
+    "Duration": 123,
+    "Date": "2019-01-01T00:00:00"
+  },
+  {
+    "Id": 23,
+    "Msisdn": "123123123",
+    "Type": "call",
+    "Duration": 123,
+    "Date": "2019-01-01T00:00:00"
+  },
+  {
+    "Id": 24,
+    "Msisdn": "123123123",
+    "Type": "call",
+    "Duration": 123,
+    "Date": "2019-01-01T00:00:00"
+  },
+  {
+    "Id": 25,
+    "Msisdn": "123123123",
+    "Type": "call",
+    "Duration": 123,
+    "Date": "2019-01-01T00:00:00"
+  },
+  {
+    "Id": 26,
+    "Msisdn": "123123123",
+    "Type": "call",
+    "Duration": 123,
+    "Date": "2019-01-01T00:00:00"
+  },
+  {
+    "Id": 27,
+    "Msisdn": "123123123",
+    "Type": "call",
+    "Duration": 123,
+    "Date": "2019-01-01T00:00:00"
+  },
+  {
+    "Id": 28,
+    "Msisdn": "123123123",
+    "Type": "call",
+    "Duration": 123,
+    "Date": "2019-01-01T00:00:00"
+  },
+  {
+    "Id": 29,
+    "Msisdn": "123123123",
+    "Type": "call",
+    "Duration": 123,
+    "Date": "2019-01-01T00:00:00"
+  },
+  {
+    "Id": 30,
+    "Msisdn": "123123123",
+    "Type": "call",
+    "Duration": 123,
+    "Date": "2019-01-01T00:00:00"
+  },
+  {
+    "Id": 31,
+    "Msisdn": "123123123",
+    "Type": "call",
+    "Duration": 123,
+    "Date": "2019-01-01T00:00:00"
+  },
+  {
+    "Id": 32,
+    "Msisdn": "123123123",
+    "Type": "call",
+    "Duration": 123,
+    "Date": "2019-01-01T00:00:00"
+  },
+  {
+    "Id": 33,
+    "Msisdn": "123123123",
+    "Type": "call",
+    "Duration": 123,
+    "Date": "2019-01-01T00:00:00"
+  },
+  {
+    "Id": 34,
+    "Msisdn": "123123123",
+    "Type": "call",
+    "Duration": 123,
+    "Date": "2019-01-01T00:00:00"
+  },
+  {
+    "Id": 35,
+    "Msisdn": "123123123",
+    "Type": "call",
+    "Duration": 123,
+    "Date": "2019-01-01T00:00:00"
+  },
+  {
+    "Id": 36,
+    "Msisdn": "123123123",
+    "Type": "call",
+    "Duration": 123,
+    "Date": "2019-01-01T00:00:00"
+  },
+  {
+    "Id": 37,
+    "Msisdn": "123123123",
+    "Type": "call",
+    "Duration": 123,
+    "Date": "2019-01-01T00:00:00"
+  },
+  {
+    "Id": 38,
+    "Msisdn": "123123123",
+    "Type": "call",
+    "Duration": 22222,
+    "Date": "2019-01-01T00:00:00"
+  },
+  {
+    "Id": 39,
+    "Msisdn": "123123123",
+    "Type": "call",
+    "Duration": 123,
+    "Date": "2019-01-01T00:00:00"
+  },
+  {
+    "Id": 40,
+    "Msisdn": "123123123",
+    "Type": "call",
+    "Duration": 22,
+    "Date": "2019-01-01T00:00:00"
+  },
+  {
+    "Id": 41,
+    "Msisdn": "123123123",
+    "Type": "call",
+    "Duration": 123,
+    "Date": "2019-01-01T00:00:00"
+  },
+  {
+    "Id": 42,
+    "Msisdn": "123123123",
+    "Type": "call",
+    "Duration": 123,
+    "Date": "2019-01-01T00:00:00"
+  },
+  {
+    "Id": 43,
+    "Msisdn": "123123123",
+    "Type": "call",
+    "Duration": 123,
+    "Date": "2019-01-01T00:00:00"
+  },
+  {
+    "Id": 44,
+    "Msisdn": "123123123",
+    "Type": "call",
+    "Duration": 123,
+    "Date": "2019-01-01T00:00:00"
+  },
+  {
+    "Id": 45,
+    "Msisdn": "123123123",
+    "Type": "call",
+    "Duration": 2232,
+    "Date": "2019-01-01T00:00:00"
+  },
+  {
+    "Id": 46,
+    "Msisdn": "123123123",
+    "Type": "call",
+    "Duration": 123,
+    "Date": "2019-01-01T00:00:00"
+  },
+  {
+    "Id": 47,
+    "Msisdn": "123123123",
+    "Type": "call",
+    "Duration": 123,
+    "Date": "2019-01-01T00:00:00"
+  },
+  {
+    "Id": 48,
+    "Msisdn": "123123123",
+    "Type": "sms",
+    "Duration": null,
+    "Date": "2019-01-01T00:00:00"
+  },
+  {
+    "Id": 49,
+    "Msisdn": "123123123",
+    "Type": "sms",
+    "Duration": null,
+    "Date": "2019-01-01T00:00:00"
+  },
+  {
+    "Id": 50,
+    "Msisdn": "123123123",
+    "Type": "sms",
+    "Duration": null,
+    "Date": "2019-01-01T00:00:00"
+  },
+  {
+    "Id": 51,
+    "Msisdn": "123123123",
+    "Type": "sms",
+    "Duration": null,
+    "Date": "2019-01-01T00:00:00"
+  },
+  {
+    "Id": 52,
+    "Msisdn": "123123123",
+    "Type": "sms",
+    "Duration": null,
+    "Date": "2019-01-25T00:00:00"
+  },
+  {
+    "Id": 53,
+    "Msisdn": "123123123",
+    "Type": "sms",
+    "Duration": null,
+    "Date": "2019-01-01T00:00:00"
+  },
+  {
+    "Id": 54,
+    "Msisdn": "123123123",
+    "Type": "sms",
+    "Duration": null,
+    "Date": "2019-01-01T00:00:00"
+  },
+  {
+    "Id": 55,
+    "Msisdn": "123123123",
+    "Type": "sms",
+    "Duration": null,
+    "Date": "2019-01-01T00:00:00"
+  },
+  {
+    "Id": 56,
+    "Msisdn": "123123123",
+    "Type": "sms",
+    "Duration": null,
+    "Date": "2019-01-01T00:00:00"
+  },
+  {
+    "Id": 57,
+    "Msisdn": "123123123",
+    "Type": "sms",
+    "Duration": null,
+    "Date": "2019-01-01T00:00:00"
+  },
+  {
+    "Id": 58,
+    "Msisdn": "123123123",
+    "Type": "sms",
+    "Duration": null,
+    "Date": "2019-01-01T00:00:00"
+  },
+  {
+    "Id": 59,
+    "Msisdn": "123123123",
+    "Type": "sms",
+    "Duration": null,
+    "Date": "2019-01-01T00:00:00"
+  },
+  {
+    "Id": 60,
+    "Msisdn": "123123123",
+    "Type": "sms",
+    "Duration": null,
+    "Date": "2019-01-01T00:00:00"
+  },
+  {
+    "Id": 61,
+    "Msisdn": "123123123",
+    "Type": "sms",
+    "Duration": null,
+    "Date": "2019-02-01T14:55:00"
+  },
+  {
+    "Id": 62,
+    "Msisdn": "123123123",
+    "Type": "sms",
+    "Duration": null,
+    "Date": "2019-02-01T14:55:00"
+  },
+  {
+    "Id": 63,
+    "Msisdn": "123123123",
+    "Type": "sms",
+    "Duration": null,
+    "Date": "2019-02-01T14:55:00"
+  },
+  {
+    "Id": 64,
+    "Msisdn": "123123123",
+    "Type": "sms",
+    "Duration": null,
+    "Date": "2019-02-01T14:55:00"
+  },
+  {
+    "Id": 65,
+    "Msisdn": "123123123",
+    "Type": "sms",
+    "Duration": null,
+    "Date": "2019-02-01T14:55:00"
+  },
+  {
+    "Id": 66,
+    "Msisdn": "123123123",
+    "Type": "sms",
+    "Duration": null,
+    "Date": "2019-02-01T14:55:00"
+  },
+  {
+    "Id": 67,
+    "Msisdn": "223123123",
+    "Type": "sms",
+    "Duration": null,
+    "Date": "2019-02-01T15:55:00"
+  }
+]
