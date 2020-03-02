@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirportListCore", "AirportListCore\AirportListCore.csproj", "{51595F29-9E7F-4C2E-8D27-280CD661B613}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{51595F29-9E7F-4C2E-8D27-280CD661B613}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51595F29-9E7F-4C2E-8D27-280CD661B613}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51595F29-9E7F-4C2E-8D27-280CD661B613}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51595F29-9E7F-4C2E-8D27-280CD661B613}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {008CE59E-1F97-4AFF-90F0-660806C3ACA2}
+	EndGlobalSection
+EndGlobal

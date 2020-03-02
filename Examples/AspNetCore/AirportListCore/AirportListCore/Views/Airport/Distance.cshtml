@@ -1,0 +1,36 @@
+﻿@using AirportListCore.ViewModels
+@{
+    ViewBag.Title = "Distances";
+}
+@model DistanceViewModel
+
+@Html.Hidden("getDistanceUrl", Url.Action("GetDistance", "Airport"))
+<br />
+<br />
+<div class="panel panel-default">
+    <div class="panel-body">
+        <div class="col-md-1">
+            @Html.Label("Airport 1")
+        </div>
+        <div class="col-md-2">
+            <select asp-for="Airport1" asp-items="new SelectList(Model.Airport1List.Select(a => a.Iata))" class="form-control dropdown"></select>
+        </div>
+
+        <div class="col-md-1">
+            @Html.Label("Airport 2")
+        </div>
+        <div class="col-md-2">
+            <select asp-for="Airport2" asp-items="new SelectList(Model.Airport1List.Select(a => a.Iata))" class="form-control dropdown"></select>
+        </div>
+        <div class="col-md-2">
+            <input type="button" class="btn btn-default" id="calculateBtn" value="Calculate distance" />
+        </div>
+    </div>
+</div>
+
+<div id="result" hidden></div>
+
+@section Scripts {
+    <!-- Page-specific script -->
+    <script src="~/js/Views/Distance.js" asp-append-version="true"></script>
+}
