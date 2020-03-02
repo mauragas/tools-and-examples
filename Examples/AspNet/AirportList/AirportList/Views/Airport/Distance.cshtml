@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "Distances";
+}
+@model AirportList.ViewModels.DistanceViewModel
+
+@Html.Hidden("getDistanceUrl", Url.Action("GetDistance", "Airport"))
+<br/>
+<br/>
+<div class="panel panel-default">
+    <div class="panel-body">
+        <div class="col-md-1">
+            @Html.Label("Airport 1")
+        </div>
+        <div class="col-md-2">
+            @Html.DropDownListFor(m => m.Airport1, new SelectList(Model.Airport1List, "iata", "iata"), new { @class = "form-control selectpicker dropdown"})
+        </div>
+
+        <div class="col-md-1">
+            @Html.Label("Airport 2")
+        </div>
+        <div class="col-md-2">
+            @Html.DropDownListFor(m => m.Airport2, new SelectList(Model.Airport2List, "iata", "iata"), new { @class = "form-control selectpicker dropdown" })
+        </div>
+        <div class="col-md-2">
+            <input type="button" class="btn btn-default" id="calculateBtn" value="Calculate distance"/>
+        </div>
+    </div>
+</div>
+
+<div id ="result" hidden></div>
+
