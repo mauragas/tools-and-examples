@@ -7,6 +7,7 @@ using Serilog;
 using Serilog.Exceptions;
 using Serilog.Formatting.Compact;
 using System.Linq;
+using System.Runtime.InteropServices;
 
 namespace AdAwayHost.Console
 {
@@ -61,8 +62,10 @@ namespace AdAwayHost.Console
         {
             var loggerConfiguration = new LoggerConfiguration()
                 .Enrich.WithExceptionDetails()
-                .WriteTo.Console()
-                .WriteTo.LocalSyslog(appName: nameof(AdAwayHost));
+                .WriteTo.Console();
+
+            if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
+                loggerConfiguration.WriteTo.LocalSyslog(appName: nameof(AdAwayHost));
 
             if (!string.IsNullOrWhiteSpace(_appConfiguration.ConfigurationOptions.LogFilePath))
                 loggerConfiguration.WriteTo.File(new CompactJsonFormatter(),
