@@ -3,9 +3,9 @@
     <ProjectReference Include="..\AdAwayHost.Shared\AdAwayHost.Shared.csproj"/>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Serilog" Version="2.9.0"/>
+    <PackageReference Include="Serilog" Version="2.10.0"/>
   </ItemGroup>
   <PropertyGroup>
-    <TargetFramework>netstandard2.1</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 </Project>

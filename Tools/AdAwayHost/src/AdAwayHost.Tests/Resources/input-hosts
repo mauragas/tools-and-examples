@@ -1,7 +1,7 @@
 # Comment 1
 
 
-0.0.0.0 HostName1
+0.0.0.0 HostName1 #HostNameX
 127.0.0.1 HostName2
 127.0.0.1   HostName3
 127.0.0.1       HostName4
@@ -18,3 +18,6 @@ X 10.0.0.10 HostName11
  # Comment 2
 
  127.0.0.1 HostName13 HostName14
+0.0.0.0 #HostName15
+0.0.0.0 __HostName16
+0.0.0.0 -

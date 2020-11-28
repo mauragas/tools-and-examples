@@ -5,24 +5,24 @@ using Serilog;
 
 namespace AdAwayHost
 {
-    public class AdAwayHost
+  public class AdAwayHost
+  {
+    private readonly ILogger log;
+    private readonly HostFileDownloader hostFileDownloader;
+    private readonly HostFileWriter hostFileWriter;
+
+    public AdAwayHost(ILogger logger, HostFileDownloader hostFileDownloader, HostFileWriter hostFileWriter)
     {
-        private readonly ILogger _log;
-        private readonly HostFileDownloader _hostFileDownloader;
-        private readonly HostFileWriter _hostFileWriter;
-
-        public AdAwayHost(ILogger logger, HostFileDownloader hostFileDownloader, HostFileWriter hostFileWriter)
-        {
-            _log = logger;
-            _hostFileDownloader = hostFileDownloader;
-            _hostFileWriter = hostFileWriter;
-        }
-
-        public async Task UpdateHosts(List<Uri> remoteHostFileUrls, string ipAddress)
-        {
-            _log.Information("Starting update with {Count} remote source file(s).", remoteHostFileUrls.Count);
-            var hostFiles = await _hostFileDownloader.DownloadHostFilesAsync(remoteHostFileUrls, ipAddress);
-            await _hostFileWriter.UpdateLocalHostFileAsync(hostFiles);
-        }
+      this.log = logger;
+      this.hostFileDownloader = hostFileDownloader;
+      this.hostFileWriter = hostFileWriter;
     }
+
+    public async Task UpdateHosts(List<Uri> remoteHostFileUrls, string ipAddress)
+    {
+      this.log.Information("Starting update with {Count} remote source file(s).", remoteHostFileUrls.Count);
+      var hostFiles = await this.hostFileDownloader.DownloadHostFilesAsync(remoteHostFileUrls, ipAddress);
+      await this.hostFileWriter.UpdateLocalHostFileAsync(hostFiles);
+    }
+  }
 }

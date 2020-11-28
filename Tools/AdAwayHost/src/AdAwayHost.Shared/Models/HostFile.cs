@@ -4,20 +4,17 @@ using System.Linq;
 
 namespace AdAwayHost.Shared.Models
 {
-    public class HostFile
+  public class HostFile
+  {
+    public SortedSet<Host> Hosts { get; set; }
+
+    public HostFile() => Hosts = new SortedSet<Host>();
+
+    public override string ToString()
     {
-        public SortedSet<Host> Hosts { get; set; }
-
-        public HostFile()
-        {
-            Hosts = new SortedSet<Host>();
-        }
-
-        public override string ToString()
-        {
-            var stringBuilder = new StringBuilder();
-            Hosts.ToList().ForEach(h => stringBuilder.AppendLine($"{h.Ip} {h.Name}"));
-            return stringBuilder.ToString();
-        }
+      var stringBuilder = new StringBuilder();
+      Hosts.ToList().ForEach(h => stringBuilder.AppendLine($"{h.Ip} {h.Name}"));
+      return stringBuilder.ToString();
     }
+  }
 }

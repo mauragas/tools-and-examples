@@ -8,51 +8,53 @@ using Serilog;
 
 namespace AdAwayHost.Tests.HostFileWriterTests
 {
-    public class HostFileWriterUnitTests
+  public class HostFileWriterUnitTests
+  {
+    private Mock<ILogger> loggerMock;
+    private HostFileParser hostFileParser;
+    private HostFileWriter hostFileWriter;
+    private Mock<IFileWrapper> fileWrapperMock;
+    private string pathToHostsFile;
+
+    [OneTimeSetUp]
+    public void Setup()
     {
-        private Mock<ILogger> _loggerMock;
-        private HostFileParser _hostFileParser;
-        private HostFileWriter _hostFileWriter;
-        private Mock<IFileWrapper> _fileWrapperMock;
-        private string _pathToHostsFile;
+      this.loggerMock = new Mock<ILogger>();
+      this.fileWrapperMock = new Mock<IFileWrapper>();
+      this.pathToHostsFile = "/etc/hosts";
 
-        [OneTimeSetUp]
-        public async Task Setup()
-        {
-            _loggerMock = new Mock<ILogger>();
-            _fileWrapperMock = new Mock<IFileWrapper>();
-            _pathToHostsFile = "/etc/hosts";
-            var oldHostFileContent = await TestHelpers.GetEmbeddedFileAsync("Resources/old-hosts");
-
-            _hostFileParser = new HostFileParser(_loggerMock.Object);
-            _hostFileWriter = new HostFileWriter(_loggerMock.Object, _fileWrapperMock.Object, _hostFileParser, _pathToHostsFile);
-        }
-
-        [Test]
-        public async Task Test_UpdateLocalHostFileAsync_FilesCombinedCorrectly()
-        {
-            // Arrange
-            var inputHostFileContent = await TestHelpers.GetEmbeddedFileAsync("Resources/input-hosts");
-            var oldHostFileContent = await TestHelpers.GetEmbeddedFileAsync("Resources/old-hosts");
-            var combinedHostFileContentExpectedOutput = await TestHelpers.GetEmbeddedFileAsync("Resources/combined-hosts");
-
-            _fileWrapperMock.Setup(f => f.Exists(_pathToHostsFile))
-                            .Returns(() => true);
-
-            _fileWrapperMock.Setup(f => f.ReadAllTextAsync(_pathToHostsFile))
-                            .ReturnsAsync(() => oldHostFileContent);
-
-            var combinedHostFileContentOutput = string.Empty;
-            _fileWrapperMock.Setup(f => f.WriteAllTextAsync(_pathToHostsFile, It.IsAny<string>()))
-                            .Callback((string pathToFile, string fileContent) => combinedHostFileContentOutput = fileContent);
-
-            // Act
-            var inputHostFileContentParsed = _hostFileParser.Parse(inputHostFileContent);
-            await _hostFileWriter.UpdateLocalHostFileAsync(new List<HostFile> { inputHostFileContentParsed });
-
-            // Assert
-            Assert.That(inputHostFileContentParsed.Hosts.Count, Is.EqualTo(9));
-            Assert.That(combinedHostFileContentOutput, Is.EqualTo(combinedHostFileContentExpectedOutput));
-        }
+      this.hostFileParser = new HostFileParser(this.loggerMock.Object);
+      this.hostFileWriter = new HostFileWriter(this.loggerMock.Object,
+        this.fileWrapperMock.Object,
+        this.hostFileParser,
+        this.pathToHostsFile);
     }
+
+    [Test]
+    public async Task Test_UpdateLocalHostFileAsync_FilesCombinedCorrectly()
+    {
+      // Arrange
+      var inputHostFileContent = await TestHelpers.GetEmbeddedFileAsync("Resources/input-hosts");
+      var oldHostFileContent = await TestHelpers.GetEmbeddedFileAsync("Resources/old-hosts");
+      var combinedHostFileContentExpectedOutput = await TestHelpers.GetEmbeddedFileAsync("Resources/combined-hosts");
+
+      _ = this.fileWrapperMock.Setup(f => f.Exists(this.pathToHostsFile))
+        .Returns(() => true);
+
+      _ = this.fileWrapperMock.Setup(f => f.ReadAllTextAsync(this.pathToHostsFile))
+        .ReturnsAsync(() => oldHostFileContent);
+
+      var combinedHostFileContentOutput = string.Empty;
+      _ = this.fileWrapperMock.Setup(f => f.WriteAllTextAsync(this.pathToHostsFile, It.IsAny<string>()))
+        .Callback((string pathToFile, string fileContent) => combinedHostFileContentOutput = fileContent);
+
+      // Act
+      var inputHostFileContentParsed = this.hostFileParser.Parse(inputHostFileContent);
+      await this.hostFileWriter.UpdateLocalHostFileAsync(new List<HostFile> { inputHostFileContentParsed });
+
+      // Assert
+      Assert.That(inputHostFileContentParsed.Hosts.Count, Is.EqualTo(9));
+      Assert.That(combinedHostFileContentOutput, Is.EqualTo(combinedHostFileContentExpectedOutput));
+    }
+  }
 }
