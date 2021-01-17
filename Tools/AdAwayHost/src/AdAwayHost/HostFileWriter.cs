@@ -27,10 +27,8 @@ namespace AdAwayHost
     public async Task UpdateLocalHostFileAsync(List<HostFile> hostFiles)
     {
       var localHostsFile = await GetLocalHostFileAsync().ConfigureAwait(false);
-
-      hostFiles.Add(localHostsFile);
+      hostFiles = hostFiles.Prepend(localHostsFile).ToList();
       var combinedHostFiles = await CombineHostFilesAsync(hostFiles);
-
       await UpdateLocalHostFileAsync(combinedHostFiles);
       this.log.Information("Local hosts file is updated. Hosts count is {Count}", combinedHostFiles.Hosts.Count);
     }

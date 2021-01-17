@@ -5,10 +5,9 @@
 127.0.0.1 HostName3
 127.0.0.1 HostName4
 0.0.0.0 HostName5
-10.0.0.10 HostName5
 10.0.0.10 HostName6
 ::1 HostName9
-::1 localhost
+::1 ip6-localhost
 127.0.0.1 localhost
 127.0.1.1 pop-os
-127.0.1.1 pop-os.localdomain
+127.0.1.1 pop-os.localDomain

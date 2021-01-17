@@ -1,5 +1,5 @@
 127.0.0.1 localhost
-::1 localhost
-127.0.1.1 pop-os.localdomain pop-os
+::1 ip6-localhost
+127.0.1.1 pop-os.localDomain pop-os
 0.0.0.0 HostName5
 0.0.0.0 HostName1

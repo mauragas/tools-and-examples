@@ -54,7 +54,7 @@ namespace AdAwayHost.Tests.HostFileWriterTests
 
       // Assert
       Assert.That(inputHostFileContentParsed.Hosts.Count, Is.EqualTo(9));
-      Assert.That(combinedHostFileContentOutput, Is.EqualTo(combinedHostFileContentExpectedOutput));
+      Assert.That(combinedHostFileContentExpectedOutput, Is.EqualTo(combinedHostFileContentOutput));
     }
   }
 }

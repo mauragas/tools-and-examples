@@ -8,7 +8,7 @@ namespace AdAwayHost.Tests
   public class TestHelpers
   {
     private static readonly EmbeddedFileProvider EmbeddedFileProvider =
-      new EmbeddedFileProvider(Assembly.GetExecutingAssembly());
+      new(Assembly.GetExecutingAssembly());
 
     public static async Task<string> GetEmbeddedFileAsync(string relativePathToFile)
     {
