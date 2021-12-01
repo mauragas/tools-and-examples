@@ -7,7 +7,7 @@
       "request": "launch",
       "preLaunchTask": "build",
       // If you have changed target frameworks, make sure to update the program path.
-      "program": "${workspaceFolder}/AdAwayHost.Console/bin/Debug/net5.0/AdAwayHosts.dll",
+      "program": "${workspaceFolder}/AdAwayHost.Console/bin/Debug/net6.0/AdAwayHosts.dll",
       "args": [
         "--HostsFilePath=hosts"
       ],
