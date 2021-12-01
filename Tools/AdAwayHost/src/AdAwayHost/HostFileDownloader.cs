@@ -32,11 +32,26 @@ namespace AdAwayHost
 
     private async Task<HostFile> DownloadHostFileAsync(Uri uri, string ipAddress)
     {
-      var fileContent = await this.httpClient.GetStringAsync(uri);
+      var fileContent = await GetStringAsync(uri);
+      if (string.IsNullOrWhiteSpace(fileContent))
+        return HostFile.Empty;
       var hostFile = this.hostFileParser.Parse(fileContent, ipAddress);
       this.log.Information("Remote host file size of {size} bytes downloaded and {count} hosts parsed from {url}.",
         fileContent.GetSizeInBytes(), hostFile.Hosts.Count, uri.ToString());
       return hostFile;
+    }
+
+    private async Task<string> GetStringAsync(Uri uri)
+    {
+      try
+      {
+        return await this.httpClient.GetStringAsync(uri);
+      }
+      catch (Exception ex)
+      {
+        this.log.Error("Failed to download host file from:{uri}", uri, ex);
+        return string.Empty;
+      }
     }
   }
 }

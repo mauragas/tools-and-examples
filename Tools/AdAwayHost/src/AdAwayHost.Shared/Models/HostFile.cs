@@ -6,6 +6,8 @@ namespace AdAwayHost.Shared.Models
 {
   public class HostFile
   {
+    public static HostFile Empty => new();
+
     public SortedSet<Host> Hosts { get; set; }
 
     public HostFile() => Hosts = new SortedSet<Host>();
